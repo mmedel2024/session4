@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh 'cat version_image | xargs ./Scripts/build.sh'
+      }
+    }
+
   }
 }
