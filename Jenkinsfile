@@ -16,6 +16,7 @@ pipeline {
     stage('run') {
       steps {
         sh 'cat versionImage | xargs bash Scripts/run.sh'
+        sh 'docker log test_api01'
       }
     }
 
