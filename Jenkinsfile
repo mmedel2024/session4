@@ -44,5 +44,11 @@ pipeline {
       }
     }
 
+    stage('Stop') {
+      steps {
+        sh 'python3 ./Scripts/stop.sh'
+      }
+    }
+
   }
 }
