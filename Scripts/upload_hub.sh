@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker push rogermz/api_cdk_ene24:$1
+docker push mmedel2024/session4:$1
 
