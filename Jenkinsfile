@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('env') {
+    stage('Environment') {
       steps {
         sh 'docker --version'
       }
     }
 
-    stage('build') {
+    stage('Build') {
       steps {
         sh 'cat versionImage | xargs ./Scripts/build.sh'
       }
