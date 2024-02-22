@@ -21,8 +21,26 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        sh 'python3 ./Scripts_test/00_test_api.py'
+      parallel {
+        stage('Test') {
+          steps {
+            sh 'python3 ./Scripts_test/00_test_api.py'
+          }
+        }
+
+        stage('Logs') {
+          steps {
+            sleep 10
+            sh 'docker logs test_app01'
+          }
+        }
+
+        stage('TestConversor') {
+          steps {
+            sh 'python3 ./Scripts_test/01_test_api.py'
+          }
+        }
+
       }
     }
 
