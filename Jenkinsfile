@@ -46,7 +46,7 @@ pipeline {
 
     stage('Stop') {
       steps {
-        sh 'bash /Scripts/stop.sh'
+        sh 'bash Scripts/stop.sh'
       }
     }
 
