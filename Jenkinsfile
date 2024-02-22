@@ -46,7 +46,13 @@ pipeline {
 
     stage('Stop') {
       steps {
-        sh 'python3 ./Scripts/stop.sh'
+        sh 'bash /Scripts/stop.sh'
+      }
+    }
+
+    stage('upload_imagen') {
+      steps {
+        sh 'cat versionImage | xargs bash Scripts/upload_hub.sh'
       }
     }
 
