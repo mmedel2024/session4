@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker push mmedel2024/session4:$1
+docker push mmedel049/session4:$1
 
